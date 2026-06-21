@@ -22,7 +22,6 @@ navLinks.querySelectorAll('a').forEach(a => {
   });
 });
 
-// close on outside click
 document.addEventListener('click', e => {
   if (!nav.contains(e.target)) {
     navLinks.classList.remove('open');
@@ -30,18 +29,34 @@ document.addEventListener('click', e => {
   }
 });
 
+// ── SCROLL REVEAL ──
+const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+
+  revealEls.forEach(el => observer.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('is-visible'));
+}
+
 // ── FAQ ACCORDION ──
 document.querySelectorAll('.faq__btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const expanded = btn.getAttribute('aria-expanded') === 'true';
 
-    // close all
     document.querySelectorAll('.faq__btn').forEach(b => {
       b.setAttribute('aria-expanded', 'false');
       document.getElementById(b.getAttribute('aria-controls')).hidden = true;
     });
 
-    // open clicked (if wasn't open)
     if (!expanded) {
       btn.setAttribute('aria-expanded', 'true');
       document.getElementById(btn.getAttribute('aria-controls')).hidden = false;
@@ -57,7 +72,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const target = document.querySelector(id);
     if (!target) return;
     e.preventDefault();
-    const offset = 70;
-    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+    window.scrollTo({
+      top: target.getBoundingClientRect().top + window.scrollY - 70,
+      behavior: 'smooth'
+    });
   });
 });

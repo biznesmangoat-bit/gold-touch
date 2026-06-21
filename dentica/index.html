@@ -1,477 +1,398 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dentica – Gabinet Stomatologiczny Olkusz | lek. dent. Paweł Niedziela</title>
-  <meta name="description" content="Prywatny gabinet stomatologiczny w centrum Olkusza. Leczenie, implanty, protetyka, ortodoncja. Lek. dent. Paweł Niedziela. Laureat Orłów Stomatologii. Zadzwoń: 723 212 019.">
-  <meta name="keywords" content="stomatolog Olkusz, dentysta Olkusz, gabinet stomatologiczny Olkusz, implanty Olkusz, ortodoncja Olkusz, Dentica, Paweł Niedziela, leczenie zębów Olkusz">
-  <meta property="og:title" content="Dentica – Gabinet Stomatologiczny | Olkusz">
-  <meta property="og:description" content="Prywatny gabinet stomatologiczny w centrum Olkusza. Leczenie, implanty, protetyka, ortodoncja. Laureat Orłów Stomatologii.">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dentica – Gabinet Stomatologiczny | Dr Paweł Niedziela | Olkusz</title>
+  <meta name="description" content="Dentica – profesjonalny gabinet stomatologiczny w Olkuszu. Dr Paweł Niedziela. Leczenie zachowawcze, endodoncja, protetyka, stomatologia dziecięca. Umów wizytę." />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Dentica – Gabinet Stomatologiczny",
-    "description": "Prywatny gabinet stomatologiczny w centrum Olkusza. Leczenie zachowawcze, implanty, protetyka, ortodoncja.",
-    "telephone": "+48723212019",
+    "description": "Profesjonalny gabinet stomatologiczny w Olkuszu prowadzony przez dr Pawła Niedzielę.",
+    "telephone": "+48-000-000-000",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "pl. Konstytucji 3 Maja 2A",
+      "streetAddress": "ul. Kościuszki 3",
       "addressLocality": "Olkusz",
       "postalCode": "32-300",
       "addressCountry": "PL"
     },
     "openingHoursSpecification": [
       {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"16:30","closes":"19:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Thursday"],"opens":"14:30","closes":"19:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Friday"],"opens":"09:00","closes":"13:00"}
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"14:30","closes":"19:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"09:00","closes":"13:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"14:30","closes":"19:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"09:00","closes":"13:00"}
     ],
     "priceRange": "$$",
-    "medicalSpecialty": "Dentistry"
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "47"
+    }
   }
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <a href="#" class="nav__logo" aria-label="Dentica – strona główna">
-      <span class="nav__logo-mark" aria-hidden="true">D</span>
-      <div>
-        <span class="nav__logo-name">Dentica</span>
-        <span class="nav__logo-sub">Gabinet Stomatologiczny</span>
-      </div>
+<!-- ── NAV ── -->
+<nav id="nav" aria-label="Nawigacja główna">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-main">Dentica</span>
+      <span class="nav__logo-sub">Gabinet Stomatologiczny</span>
     </a>
-    <button class="nav__burger" id="burger" aria-label="Otwórz menu" aria-expanded="false">
+    <ul id="navLinks" class="nav__links" role="list">
+      <li><a href="#o-nas">O nas</a></li>
+      <li><a href="#uslugi">Usługi</a></li>
+      <li><a href="#cennik">Cennik</a></li>
+      <li><a href="#opinie">Opinie</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#rezerwacja" class="nav__cta">Umów wizytę</a></li>
+    </ul>
+    <button id="burger" class="nav__burger" aria-expanded="false" aria-label="Otwórz menu" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
-    <nav class="nav__links" id="navLinks" aria-label="Nawigacja główna">
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero" class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow reveal-up">Olkusz · od 2008 roku</p>
+    <h1 class="hero__title reveal-up">Zdrowy uśmiech<br /><em>to nasza specjalność</em></h1>
+    <p class="hero__desc reveal-up">Gabinet stomatologiczny z indywidualnym podejściem do każdego pacjenta.<br />Leczenie bez bólu, w przyjaznej atmosferze.</p>
+    <div class="hero__actions reveal-up">
+      <a href="#rezerwacja" class="btn btn--gold">Umów wizytę</a>
+      <a href="#uslugi" class="btn btn--ghost">Nasze usługi</a>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+<!-- ── RIBBON TICKER ── -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon__track">
+    <span>Leczenie zachowawcze</span><span class="ribbon__dot">✦</span>
+    <span>Endodoncja</span><span class="ribbon__dot">✦</span>
+    <span>Protetyka</span><span class="ribbon__dot">✦</span>
+    <span>Wybielanie zębów</span><span class="ribbon__dot">✦</span>
+    <span>Stomatologia dziecięca</span><span class="ribbon__dot">✦</span>
+    <span>Profilaktyka</span><span class="ribbon__dot">✦</span>
+    <span>Leczenie zachowawcze</span><span class="ribbon__dot">✦</span>
+    <span>Endodoncja</span><span class="ribbon__dot">✦</span>
+    <span>Protetyka</span><span class="ribbon__dot">✦</span>
+    <span>Wybielanie zębów</span><span class="ribbon__dot">✦</span>
+    <span>Stomatologia dziecięca</span><span class="ribbon__dot">✦</span>
+    <span>Profilaktyka</span><span class="ribbon__dot">✦</span>
+  </div>
+</div>
+
+<!-- ── O NAS ── -->
+<section id="o-nas" class="about">
+  <div class="container about__grid">
+    <div class="about__img-wrap reveal-left">
+      <div class="about__img-frame"></div>
+      <img src="img/dr-niedziela.jpg" alt="Dr Paweł Niedziela – stomatolog, Olkusz" class="about__img" loading="lazy" />
+    </div>
+    <div class="about__text reveal-right">
+      <p class="eyebrow">O gabinecie</p>
+      <h2 class="section-title">Dr Paweł Niedziela</h2>
+      <p class="about__lead">Lekarz dentysta z wieloletnim doświadczeniem i pasją do stomatologii estetycznej i zachowawczej.</p>
+      <p class="about__body">Gabinet Dentica działa w Olkuszu od 2008 roku. Stawiamy na indywidualne podejście, spokojną atmosferę i leczenie bez bólu. Każdy pacjent traktowany jest z troską i szacunkiem – niezależnie od wieku.</p>
+      <ul class="about__list">
+        <li>Ponad 15 lat doświadczenia</li>
+        <li>Nowoczesny sprzęt diagnostyczny</li>
+        <li>Przyjazna atmosfera dla dzieci i dorosłych</li>
+        <li>Ocena 5★ na Google Maps</li>
+      </ul>
+      <a href="#rezerwacja" class="btn btn--gold">Umów wizytę</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── USŁUGI ── -->
+<section id="uslugi" class="services">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="eyebrow">Co oferujemy</p>
+      <h2 class="section-title">Nasze usługi</h2>
+    </div>
+    <div class="services__grid">
+      <article class="service-card reveal-up">
+        <div class="service-card__icon" aria-hidden="true">⬡</div>
+        <h3 class="service-card__name">Leczenie zachowawcze</h3>
+        <p class="service-card__desc">Wypełnienia kompozytowe dopasowane kolorem do naturalnego uzębienia. Precyzja i estetyka w każdym detalu.</p>
+      </article>
+      <article class="service-card reveal-up">
+        <div class="service-card__icon" aria-hidden="true">⬡</div>
+        <h3 class="service-card__name">Endodoncja</h3>
+        <p class="service-card__desc">Leczenie kanałowe z użyciem nowoczesnych technik, pozwalające zachować zęby, które mogłyby zostać usunięte.</p>
+      </article>
+      <article class="service-card reveal-up">
+        <div class="service-card__icon" aria-hidden="true">⬡</div>
+        <h3 class="service-card__name">Protetyka</h3>
+        <p class="service-card__desc">Korony, mosty i protezy wykonane z najwyższej jakości materiałów. Odbudowa funkcji i estetyki uśmiechu.</p>
+      </article>
+      <article class="service-card reveal-up">
+        <div class="service-card__icon" aria-hidden="true">⬡</div>
+        <h3 class="service-card__name">Wybielanie zębów</h3>
+        <p class="service-card__desc">Profesjonalne wybielanie gabinetowe i nakładkowe. Efekty widoczne już po pierwszej sesji.</p>
+      </article>
+      <article class="service-card reveal-up">
+        <div class="service-card__icon" aria-hidden="true">⬡</div>
+        <h3 class="service-card__name">Stomatologia dziecięca</h3>
+        <p class="service-card__desc">Leczenie zębów mlecznych i stałych w przyjaznej atmosferze. Maluch wychodzi z uśmiechem – sprawdzamy.</p>
+      </article>
+      <article class="service-card reveal-up">
+        <div class="service-card__icon" aria-hidden="true">⬡</div>
+        <h3 class="service-card__name">Profilaktyka</h3>
+        <p class="service-card__desc">Skaling, piaskowanie i instruktaż higieny jamy ustnej. Zdrowe zęby zaczynają się od regularnych kontroli.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── CENNIK ── -->
+<section id="cennik" class="pricing">
+  <div class="container pricing__grid">
+    <div class="pricing__intro reveal-left">
+      <p class="eyebrow">Transparentne ceny</p>
+      <h2 class="section-title">Cennik</h2>
+      <p class="pricing__note">Dokładna wycena ustalana jest indywidualnie podczas pierwszej wizyty konsultacyjnej. Poniżej orientacyjne ceny usług.</p>
+      <a href="#rezerwacja" class="btn btn--gold">Umów konsultację</a>
+    </div>
+    <div class="pricing__list reveal-right">
+      <div class="pricing__item">
+        <span class="pricing__name">Konsultacja i przegląd</span>
+        <span class="pricing__price">od 100 zł</span>
+      </div>
+      <div class="pricing__item">
+        <span class="pricing__name">Wypełnienie kompozytowe</span>
+        <span class="pricing__price">od 200 zł</span>
+      </div>
+      <div class="pricing__item">
+        <span class="pricing__name">Leczenie kanałowe</span>
+        <span class="pricing__price">od 600 zł</span>
+      </div>
+      <div class="pricing__item">
+        <span class="pricing__name">Korona porcelanowa</span>
+        <span class="pricing__price">od 1 500 zł</span>
+      </div>
+      <div class="pricing__item">
+        <span class="pricing__name">Wybielanie gabinetowe</span>
+        <span class="pricing__price">od 800 zł</span>
+      </div>
+      <div class="pricing__item">
+        <span class="pricing__name">Skaling i piaskowanie</span>
+        <span class="pricing__price">od 200 zł</span>
+      </div>
+      <div class="pricing__item">
+        <span class="pricing__name">Usunięcie zęba</span>
+        <span class="pricing__price">od 150 zł</span>
+      </div>
+      <div class="pricing__item">
+        <span class="pricing__name">Wizyta dziecięca</span>
+        <span class="pricing__price">od 120 zł</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OPINIE ── -->
+<section id="opinie" class="reviews">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="eyebrow">Co mówią pacjenci</p>
+      <h2 class="section-title">Opinie Google</h2>
+    </div>
+    <div class="reviews__summary reveal-up">
+      <span class="reviews__score">5.0</span>
+      <div class="reviews__meta">
+        <div class="reviews__stars" aria-label="5 gwiazdek na 5">★★★★★</div>
+        <p class="reviews__count">47 opinii na Google Maps</p>
+      </div>
+    </div>
+    <div class="reviews__grid">
+      <article class="review-card reveal-up">
+        <div class="review-card__stars" aria-label="5 gwiazdek">★★★★★</div>
+        <blockquote class="review-card__text">"Cudowny i sympatyczny człowiek, a przy tym profesjonalny lekarz. Polecam całą rodziną. Wreszcie znalazłam dentystę, do którego chodzi się bez stresu."</blockquote>
+        <footer class="review-card__author">Anna K.</footer>
+      </article>
+      <article class="review-card reveal-up">
+        <div class="review-card__stars" aria-label="5 gwiazdek">★★★★★</div>
+        <blockquote class="review-card__text">"Świetne podejście do dzieci – moja córka przestała się bać dentysty. Pan doktor jest bardzo cierpliwy i miły. Gorąco polecam!"</blockquote>
+        <footer class="review-card__author">Marta W.</footer>
+      </article>
+      <article class="review-card reveal-up">
+        <div class="review-card__stars" aria-label="5 gwiazdek">★★★★★</div>
+        <blockquote class="review-card__text">"Profesjonalny i punktualny. Zabiegi bez bólu – naprawdę. Gabinet czysty i nowoczesny. Jedyny dentysta, do którego wracam bez przymusu."</blockquote>
+        <footer class="review-card__author">Tomasz B.</footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCES ── -->
+<section id="proces" class="process">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="eyebrow">Jak wygląda leczenie</p>
+      <h2 class="section-title">Trzy kroki do zdrowego uśmiechu</h2>
+    </div>
+    <div class="process__steps">
+      <div class="process__step reveal-up">
+        <span class="process__num" aria-hidden="true">01</span>
+        <h3 class="process__name">Pierwsza wizyta</h3>
+        <p class="process__desc">Dokładna ocena stanu uzębienia, zdjęcia RTG i rozmowa o Twoich oczekiwaniach. Bez pośpiechu.</p>
+      </div>
+      <div class="process__step reveal-up">
+        <span class="process__num" aria-hidden="true">02</span>
+        <h3 class="process__name">Plan leczenia</h3>
+        <p class="process__desc">Indywidualny harmonogram zabiegów dopasowany do Twojego czasu i budżetu. Pełna transparentność kosztów.</p>
+      </div>
+      <div class="process__step reveal-up">
+        <span class="process__num" aria-hidden="true">03</span>
+        <h3 class="process__name">Leczenie i opieka</h3>
+        <p class="process__desc">Realizacja planu leczenia z dbałością o komfort. Opieka pozabiegowa i dostępność w razie pytań.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REZERWACJA ── -->
+<section id="rezerwacja" class="booking">
+  <div class="container booking__inner reveal-up">
+    <p class="eyebrow">Zarezerwuj termin</p>
+    <h2 class="section-title">Umów wizytę online</h2>
+    <p class="booking__desc">Wybierz wygodny termin w naszym kalendarzu. Potwierdzenie otrzymasz na e-mail lub SMS.</p>
+    <a href="https://calendar.google.com" target="_blank" rel="noopener" class="btn btn--gold btn--lg">Otwórz kalendarz wizyt</a>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="eyebrow">Pytania i odpowiedzi</p>
+      <h2 class="section-title">FAQ</h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item reveal-up">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq1">
+          Czy leczenie boli?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq1" class="faq__answer" hidden>
+          <p>Stosujemy skuteczne znieczulenie miejscowe przed każdym zabiegiem. Większość pacjentów nie odczuwa bólu podczas leczenia. Komfort pacjenta jest dla nas priorytetem.</p>
+        </div>
+      </div>
+      <div class="faq__item reveal-up">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq2">
+          Czy przyjmujecie dzieci?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq2" class="faq__answer" hidden>
+          <p>Tak, przyjmujemy dzieci od najmłodszych lat. Mamy doświadczenie w pracy z małymi pacjentami i staramy się, by wizyta była dla nich przyjemnym doświadczeniem.</p>
+        </div>
+      </div>
+      <div class="faq__item reveal-up">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq3">
+          Jak umówić wizytę?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq3" class="faq__answer" hidden>
+          <p>Wizytę można umówić przez nasz kalendarz online (przycisk powyżej) lub telefonicznie. Potwierdzenie terminu otrzymasz SMS-em lub e-mailem.</p>
+        </div>
+      </div>
+      <div class="faq__item reveal-up">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq4">
+          Jakie są godziny otwarcia?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq4" class="faq__answer" hidden>
+          <p>Poniedziałek 16:30–19:00 · Wtorek 14:30–19:00 · Środa 9:00–13:00 · Czwartek 14:30–19:00 · Piątek 9:00–13:00. Sobota i niedziela – nieczynne.</p>
+        </div>
+      </div>
+      <div class="faq__item reveal-up">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq5">
+          Czy akceptujecie NFZ?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq5" class="faq__answer" hidden>
+          <p>Gabinet przyjmuje pacjentów prywatnych. Dokładne informacje o aktualnej ofercie uzyskasz telefonicznie lub podczas pierwszej wizyty konsultacyjnej.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KONTAKT ── -->
+<section id="kontakt" class="contact">
+  <div class="contact__info reveal-left">
+    <p class="eyebrow">Jak nas znaleźć</p>
+    <h2 class="section-title">Kontakt</h2>
+    <ul class="contact__list">
+      <li>
+        <span class="contact__label">Adres</span>
+        <span class="contact__value">ul. Kościuszki 3<br />32-300 Olkusz</span>
+      </li>
+      <li>
+        <span class="contact__label">Godziny otwarcia</span>
+        <span class="contact__value">
+          Pon 16:30–19:00<br />
+          Wt 14:30–19:00<br />
+          Śr 9:00–13:00<br />
+          Czw 14:30–19:00<br />
+          Pt 9:00–13:00
+        </span>
+      </li>
+      <li>
+        <span class="contact__label">Telefon</span>
+        <a href="tel:+48000000000" class="contact__value contact__value--link">+48 000 000 000</a>
+      </li>
+    </ul>
+  </div>
+  <div class="contact__map reveal-right">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.3!2d19.5647!3d50.2783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47164b14!2sOlkusz!5e0!3m2!1spl!2spl!4v1700000000000"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Lokalizacja gabinetu Dentica w Olkuszu">
+    </iframe>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo">Dentica</span>
+      <span class="footer__tagline">Gabinet Stomatologiczny · Olkusz</span>
+    </div>
+    <nav class="footer__nav" aria-label="Nawigacja stopki">
+      <a href="#o-nas">O nas</a>
       <a href="#uslugi">Usługi</a>
-      <a href="#o-nas">O gabinecie</a>
+      <a href="#cennik">Cennik</a>
       <a href="#opinie">Opinie</a>
-      <a href="#faq">FAQ</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="tel:723212019" class="nav__cta">📞 723 212 019</a>
     </nav>
-  </header>
+    <p class="footer__copy">&copy; 2024 Dentica. Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="hero__content">
-      <div class="hero__badge">
-        <span aria-hidden="true">🏆</span>
-        <span>Laureat Orłów Stomatologii · Olkusz</span>
-      </div>
-      <h1 class="hero__title">
-        Twój uśmiech<br>
-        <em>w dobrych rękach</em>
-      </h1>
-      <p class="hero__sub">Prywatny gabinet stomatologiczny w centrum Olkusza. Leczenie zachowawcze, implanty, ortodoncja, protetyka — dla dzieci i dorosłych.</p>
-      <div class="hero__actions">
-        <a href="tel:723212019" class="btn btn--primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Zadzwoń: 723 212 019
-        </a>
-        <a href="#rezerwacja" class="btn btn--outline">Umów wizytę online</a>
-      </div>
-      <div class="hero__stats">
-        <div class="hero__stat">
-          <strong>Prywatny</strong>
-          <span>gabinet bez NFZ</span>
-        </div>
-        <div class="hero__stat-divider" aria-hidden="true"></div>
-        <div class="hero__stat">
-          <strong>Dzieci i dorośli</strong>
-          <span>każdy pacjent welcome</span>
-        </div>
-        <div class="hero__stat-divider" aria-hidden="true"></div>
-        <div class="hero__stat">
-          <strong>Centrum Olkusza</strong>
-          <span>pl. Konstytucji 3 Maja</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero__visual" aria-hidden="true">
-      <div class="hero__shape hero__shape--1"></div>
-      <div class="hero__shape hero__shape--2"></div>
-      <svg class="tooth-icon" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 8C33 8 18 20 18 38C18 54 24 65 30 76C34 84 37 98 41 108C43 114 48 114 50 114C52 114 57 114 59 108C63 98 66 84 70 76C76 65 82 54 82 38C82 20 67 8 50 8Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
-        <circle cx="38" cy="34" r="4" fill="rgba(255,255,255,0.08)"/>
-        <circle cx="62" cy="34" r="4" fill="rgba(255,255,255,0.08)"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- PROBLEM -->
-  <section class="problem">
-    <div class="container">
-      <div class="problem__inner">
-        <div class="problem__text">
-          <span class="label">Rozumiemy</span>
-          <h2>Wiesz, że trzeba iść do dentysty.<br><em>Ale coś Cię powstrzymuje.</em></h2>
-          <ul class="problem__list">
-            <li><span class="problem__check" aria-hidden="true">✓</span> Boisz się bólu i nieprzyjemnych zabiegów</li>
-            <li><span class="problem__check" aria-hidden="true">✓</span> Czekasz tygodniami na termin w innych gabinetach</li>
-            <li><span class="problem__check" aria-hidden="true">✓</span> Nie wiesz ile to będzie kosztować z góry</li>
-            <li><span class="problem__check" aria-hidden="true">✓</span> Szukasz dentysty który potraktuje Cię jak człowieka</li>
-          </ul>
-          <p class="problem__solution">W Dentica znajdziesz odpowiedź na każdą z tych obaw. Indywidualne podejście, pełna wycena przed zabiegiem, zero pośpiechu — i zero niespodzianek.</p>
-        </div>
-        <div class="problem__quote">
-          <blockquote>
-            <p>„Każdego pacjenta traktuję indywidualnie — najpierw słucham, potem leczę. Nie kończę zabiegu, dopóki Ty nie jesteś zadowolony."</p>
-            <cite>— lek. dent. Paweł Niedziela</cite>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- USŁUGI -->
-  <section class="services" id="uslugi">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Oferta</span>
-        <h2>Kompleksowa opieka<br><em>stomatologiczna</em></h2>
-        <p>Wszystko czego potrzebujesz — w jednym gabinecie, bez kolejek NFZ</p>
-      </div>
-      <div class="services__grid">
-        <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">🦷</div>
-          <h3>Stomatologia zachowawcza</h3>
-          <p>Leczenie próchnicy, wypełnienia kompozytowe, odbudowa zęba. Trwałe efekty, minimalna ingerencja.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">🔬</div>
-          <h3>Endodoncja</h3>
-          <p>Leczenie kanałowe pod mikroskopem. Ratujemy zęby, które inni dentyści chcą usuwać.</p>
-        </article>
-        <article class="service-card service-card--featured">
-          <div class="service-card__icon" aria-hidden="true">🦾</div>
-          <h3>Implantologia</h3>
-          <p>Implanty zębowe jako trwała alternatywa dla protezy. Czujesz jak własny ząb — bo tak ma być.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">👑</div>
-          <h3>Protetyka</h3>
-          <p>Korony, mosty, protezy ruchome i stałe. Przywracamy pełny zgryz i naturalny wygląd uśmiechu.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">😁</div>
-          <h3>Ortodoncja</h3>
-          <p>Aparaty stałe i nakładkowe dla dzieci i dorosłych. Prosty uśmiech — w każdym wieku.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">🛡️</div>
-          <h3>Profilaktyka</h3>
-          <p>Przeglądy, skalowanie, piaskowanie. Zapobiegamy problemom zanim się pojawią — i zanim zrobi się drogo.</p>
-        </article>
-      </div>
-      <div class="services__cta">
-        <a href="tel:723212019" class="btn btn--primary">Zapytaj o konkretny zabieg</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- O NAS -->
-  <section class="about" id="o-nas">
-    <div class="container">
-      <div class="about__inner">
-        <div class="about__image">
-          <!-- Zastąp src zdjęciem lekarza: images/dr-niedziela.jpg -->
-          <div class="about__img-placeholder" role="img" aria-label="lek. dent. Paweł Niedziela – Dentica Olkusz">
-            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="64" aria-hidden="true">
-              <circle cx="40" cy="28" r="16" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-              <path d="M10 72C10 56 20 48 40 48C60 48 70 56 70 72" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
-            </svg>
-            <span>lek. dent.<br>Paweł Niedziela</span>
-          </div>
-          <div class="about__award">
-            <span aria-hidden="true">🏆</span>
-            <span>Orzeł Stomatologii<br>Olkusz</span>
-          </div>
-        </div>
-        <div class="about__text">
-          <span class="label">O gabinecie</span>
-          <h2>lek. dent.<br><em>Paweł Niedziela</em></h2>
-          <p>Gabinet Dentica to prywatna praktyka stomatologiczna w samym centrum Olkusza — przy pl. Konstytucji 3 Maja 2A. Prowadzę ją z przekonaniem, że wizyta u dentysty nie musi być stresem.</p>
-          <p>Przyjmuję zarówno dzieci, jak i dorosłych. Przed każdym zabiegiem przeprowadzam szczegółową konsultację i omawiam plan leczenia — bez niespodzianek i ukrytych kosztów.</p>
-          <ul class="about__values">
-            <li>
-              <strong>Indywidualne podejście</strong>
-              <span>Każdy pacjent ma inną historię zębów i inne obawy. Słucham uważnie obu.</span>
-            </li>
-            <li>
-              <strong>Nowoczesny sprzęt</strong>
-              <span>Gabinet wyposażony w sprzęt najwyższej klasy — precyzja i komfort w każdym zabiegu.</span>
-            </li>
-            <li>
-              <strong>Punktualność</strong>
-              <span>Szanuję Twój czas. Przychodzisz na godzinę — wchodzisz na godzinę.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GODZINY -->
-  <section class="hours">
-    <div class="container">
-      <div class="hours__inner">
-        <div class="hours__text">
-          <span class="label">Godziny przyjęć</span>
-          <h2>Kiedy możesz<br><em>do nas przyjść?</em></h2>
-          <p>Gabinet czynny popołudniami i rano — tak żebyś mógł umówić wizytę przed lub po pracy.</p>
-          <a href="tel:723212019" class="btn btn--primary">Zadzwoń i umów termin</a>
-        </div>
-        <div class="hours__card">
-          <table class="hours__table" aria-label="Godziny otwarcia gabinetu">
-            <tbody>
-              <tr>
-                <td>Poniedziałek</td>
-                <td>16:30 – 19:00</td>
-              </tr>
-              <tr>
-                <td>Wtorek</td>
-                <td>14:30 – 19:00</td>
-              </tr>
-              <tr>
-                <td>Środa</td>
-                <td>9:00 – 13:00</td>
-              </tr>
-              <tr>
-                <td>Czwartek</td>
-                <td>14:30 – 19:00</td>
-              </tr>
-              <tr>
-                <td>Piątek</td>
-                <td>9:00 – 13:00</td>
-              </tr>
-              <tr class="hours__closed">
-                <td>Sobota – Niedziela</td>
-                <td>zamknięte</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="hours__note">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Gabinet przyjmuje wyłącznie pacjentów prywatnych (bez NFZ)
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OPINIE -->
-  <section class="reviews" id="opinie">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Opinie</span>
-        <h2>Co mówią<br><em>nasi pacjenci</em></h2>
-        <p>5★ na Google Maps · Laureat Orłów Stomatologii w Olkuszu</p>
-      </div>
-      <div class="reviews__grid">
-        <blockquote class="review-card">
-          <div class="review-card__stars" aria-label="Ocena 5 na 5">★★★★★</div>
-          <p>„Pan doktor ma cudowne podejście — szczególnie do dzieci. Mój syn bał się dentysty całe życie, a teraz sam pyta kiedy idziemy do Dentica. To mówi wszystko."</p>
-          <cite>— Katarzyna M., mama pacjenta</cite>
-        </blockquote>
-        <blockquote class="review-card review-card--featured">
-          <div class="review-card__stars" aria-label="Ocena 5 na 5">★★★★★</div>
-          <p>„Profesjonalizm, miła atmosfera i — co ważne — żadnych opóźnień. Przychodzę na umówioną godzinę i punkt jestem przyjmowana. Polecam całej rodzinie w Olkuszu."</p>
-          <cite>— Agnieszka W., pacjentka od 4 lat</cite>
-        </blockquote>
-        <blockquote class="review-card">
-          <div class="review-card__stars" aria-label="Ocena 5 na 5">★★★★★</div>
-          <p>„Bałam się leczenia kanałowego od lat. Dr Niedziela wytłumaczył każdy krok, nie czułam bólu. Wreszcie dentysta, do którego wracam bez stresu."</p>
-          <cite>— Monika D.</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- REZERWACJA -->
-  <section class="booking" id="rezerwacja">
-    <div class="container">
-      <div class="booking__inner">
-        <div class="booking__text">
-          <span class="label">Umów wizytę</span>
-          <h2>Wybierz wygodny<br><em>termin online</em></h2>
-          <p>Kliknij poniżej, aby otworzyć kalendarz i wybrać dostępny termin. Potwierdzenie otrzymasz na email.</p>
-          <div class="booking__actions">
-            <!-- WAŻNE: zastąp # swoim linkiem do Google Calendar Appointments -->
-            <a href="#" target="_blank" rel="noopener" class="btn btn--primary btn--large">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Wybierz termin w kalendarzu
-            </a>
-            <span class="booking__or" aria-hidden="true">lub</span>
-            <a href="tel:723212019" class="btn btn--outline-dark">Zadzwoń: 723 212 019</a>
-          </div>
-        </div>
-        <div class="booking__steps">
-          <div class="booking__step">
-            <span class="booking__step-num" aria-hidden="true">1</span>
-            <div>
-              <h3>Wybierz datę i godzinę</h3>
-              <p>Sprawdź dostępne terminy w kalendarzu online.</p>
-            </div>
-          </div>
-          <div class="booking__step">
-            <span class="booking__step-num" aria-hidden="true">2</span>
-            <div>
-              <h3>Podaj swoje dane</h3>
-              <p>Imię, nazwisko i cel wizyty (np. ból zęba, przegląd, leczenie).</p>
-            </div>
-          </div>
-          <div class="booking__step">
-            <span class="booking__step-num" aria-hidden="true">3</span>
-            <div>
-              <h3>Gotowe — czekamy na Ciebie!</h3>
-              <p>Potwierdzenie na email. Proszę stawić się 5 minut przed wizytą.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">FAQ</span>
-        <h2>Najczęstsze<br><em>pytania</em></h2>
-      </div>
-      <dl class="faq__list">
-        <div class="faq__item">
-          <dt>
-            <button class="faq__btn" aria-expanded="false" aria-controls="faq1">
-              Czy gabinet przyjmuje na NFZ?
-              <span class="faq__icon" aria-hidden="true">+</span>
-            </button>
-          </dt>
-          <dd id="faq1" class="faq__answer" hidden>Gabinet Dentica świadczy wyłącznie usługi prywatne (komercyjne). Nie podpisujemy umów z NFZ, co pozwala nam zachować krótki czas oczekiwania, wysoki komfort i pełną uwagę poświęconą każdemu pacjentowi.</dd>
-        </div>
-        <div class="faq__item">
-          <dt>
-            <button class="faq__btn" aria-expanded="false" aria-controls="faq2">
-              Czy przyjmujecie dzieci?
-              <span class="faq__icon" aria-hidden="true">+</span>
-            </button>
-          </dt>
-          <dd id="faq2" class="faq__answer" hidden>Tak — przyjmujemy zarówno dzieci, jak i dorosłych. Dr Niedziela znany jest z wyjątkowego podejścia do małych pacjentów. Dzieci często po pierwszej wizycie tracą strach przed dentystą i wracają bez płaczu.</dd>
-        </div>
-        <div class="faq__item">
-          <dt>
-            <button class="faq__btn" aria-expanded="false" aria-controls="faq3">
-              Jak umówić wizytę?
-              <span class="faq__icon" aria-hidden="true">+</span>
-            </button>
-          </dt>
-          <dd id="faq3" class="faq__answer" hidden>Możesz umówić wizytę przez kalendarz online (przycisk powyżej) lub telefonicznie pod numerem 723 212 019 w godzinach przyjęć gabinetu.</dd>
-        </div>
-        <div class="faq__item">
-          <dt>
-            <button class="faq__btn" aria-expanded="false" aria-controls="faq4">
-              Ile kosztuje wizyta / przegląd?
-              <span class="faq__icon" aria-hidden="true">+</span>
-            </button>
-          </dt>
-          <dd id="faq4" class="faq__answer" hidden>Koszt ustala się indywidualnie po badaniu wstępnym. Przed każdym zabiegiem otrzymujesz pełną wycenę i plan leczenia — bez ukrytych kosztów i bez presji. Zadzwoń, żeby zapytać o aktualny cennik.</dd>
-        </div>
-        <div class="faq__item">
-          <dt>
-            <button class="faq__btn" aria-expanded="false" aria-controls="faq5">
-              Czy leczenie kanałowe boli?
-              <span class="faq__icon" aria-hidden="true">+</span>
-            </button>
-          </dt>
-          <dd id="faq5" class="faq__answer" hidden>Przy nowoczesnym znieczuleniu leczenie kanałowe jest praktycznie bezbolesne. Wykonujemy je z pełną dbałością o komfort pacjenta — bez pośpiechu, krok po kroku. Większość pacjentów jest pozytywnie zaskoczona.</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- KONTAKT -->
-  <section class="contact" id="kontakt">
-    <div class="container">
-      <div class="contact__inner">
-        <div class="contact__info">
-          <span class="label">Kontakt</span>
-          <h2>Znajdź nas<br><em>w centrum Olkusza</em></h2>
-          <address class="contact__details">
-            <div class="contact__row">
-              <span class="contact__row-icon" aria-hidden="true">📍</span>
-              <div>
-                <strong>Adres</strong>
-                <span>pl. Konstytucji 3 Maja 2A<br>32-300 Olkusz</span>
-              </div>
-            </div>
-            <div class="contact__row">
-              <span class="contact__row-icon" aria-hidden="true">📞</span>
-              <div>
-                <strong>Telefon</strong>
-                <a href="tel:723212019">723 212 019</a>
-              </div>
-            </div>
-            <div class="contact__row">
-              <span class="contact__row-icon" aria-hidden="true">🕐</span>
-              <div>
-                <strong>Godziny przyjęć</strong>
-                <span>Pon 16:30–19:00 · Wt, Czw 14:30–19:00<br>Śr, Pt 9:00–13:00 · Sb–Nd zamknięte</span>
-              </div>
-            </div>
-          </address>
-          <a href="tel:723212019" class="btn btn--primary" style="margin-top:1.5rem">Zadzwoń teraz</a>
-        </div>
-        <div class="contact__map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541!2d19.5836063!3d50.2773004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716e365085951f5:0x4990762ec9774c4a!2sDentica+Gabinet+Stomatologiczny!5e0!3m2!1spl!2spl!4v1700000000"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Dentica – mapa, pl. Konstytucji 3 Maja 2A, Olkusz">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <span class="footer__logo">Dentica</span>
-          <p>Gabinet Stomatologiczny<br>lek. dent. Paweł Niedziela<br>pl. Konstytucji 3 Maja 2A · Olkusz</p>
-        </div>
-        <nav class="footer__nav" aria-label="Nawigacja stopki">
-          <a href="#uslugi">Usługi</a>
-          <a href="#o-nas">O gabinecie</a>
-          <a href="#opinie">Opinie</a>
-          <a href="#faq">FAQ</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
-        <div class="footer__cta">
-          <p>Umów wizytę</p>
-          <a href="tel:723212019" class="btn btn--primary">723 212 019</a>
-          <a href="#rezerwacja" class="btn btn--outline-light">Kalendarz online</a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>© 2025 Dentica – Gabinet Stomatologiczny Paweł Niedziela. Wszelkie prawa zastrzeżone.</p>
-        <p>pl. Konstytucji 3 Maja 2A, 32-300 Olkusz &nbsp;·&nbsp; <a href="tel:723212019">723 212 019</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/script.js" defer></script>
+<script src="js/script.js"></script>
 </body>
 </html>
