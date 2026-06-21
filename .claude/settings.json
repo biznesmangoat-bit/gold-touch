@@ -5,8 +5,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "input=$(cat); prompt=$(echo \"$input\" | jq -r '.prompt // \"\"'); if echo \"$prompt\" | grep -iE '(strona|stron[ę|y]|website|webpage|html|css|javascript|typescript|jsx|tsx|react|vue|angular|frontend|landing|page|design|UI|UX|interfejs|zaprojektuj|stwórz stronę|zrób stronę|kod strony|layout|navbar|header|footer|hero|komponent|component|button|form|menu|grid|flexbox|tailwind|bootstrap|scss|sass)' > /dev/null 2>&1; then skill=$(cat .claude/skills/frontend-design.md 2>/dev/null); if [ -n \"$skill\" ]; then jq -n --arg ctx \"$skill\" '{\"hookSpecificOutput\": {\"hookEventName\": \"UserPromptSubmit\", \"additionalContext\": (\"## Frontend Design Skill - Apply these principles to all frontend work:\\n\\n\" + $ctx)}}'; fi; fi",
-            "statusMessage": "Applying frontend-design skill..."
+            "command": "input=$(cat); prompt=$(echo \"$input\" | jq -r '.prompt // \"\"'); if echo \"$prompt\" | grep -iE '(strona|stron|website|webpage|html|css|javascript|typescript|jsx|tsx|react|vue|angular|frontend|landing|page|design|UI|UX|interfejs|zaprojektuj|stworz strone|zrob strone|kod strony|layout|navbar|header|footer|hero|komponent|component|button|form|menu|grid|flexbox|tailwind|bootstrap|scss|sass|glassmorphism|dark mode|dashboard|admin panel|modal|sidebar|card|banner|brand|typography|color palette|font|spacing|animation|shadow|gradient|bento|brutalism|neumorphism|skeuomorphism|claymorphism)' > /dev/null 2>&1; then ctx=\"\"; for f in .claude/skills/frontend-design.md .claude/skills/ui-ux-pro-max.md .claude/skills/design.md .claude/skills/ui-styling.md; do [ -f \"$f\" ] && ctx=\"$ctx\\n\\n---\\n\\n$(cat $f)\"; done; if [ -n \"$ctx\" ]; then jq -n --arg c \"$ctx\" '{\"hookSpecificOutput\": {\"hookEventName\": \"UserPromptSubmit\", \"additionalContext\": (\"## Design Skills - Apply these principles:\\n\" + $c)}}'; fi; fi",
+            "statusMessage": "Applying UI/UX design skills..."
           }
         ]
       }
