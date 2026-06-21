@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "input=$(cat); prompt=$(echo \"$input\" | jq -r '.prompt // \"\"'); if echo \"$prompt\" | grep -iE '(strona|stron[ę|y]|website|webpage|html|css|javascript|typescript|jsx|tsx|react|vue|angular|frontend|landing|page|design|UI|UX|interfejs|zaprojektuj|stwórz stronę|zrób stronę|kod strony|layout|navbar|header|footer|hero|komponent|component|button|form|menu|grid|flexbox|tailwind|bootstrap|scss|sass)' > /dev/null 2>&1; then skill=$(cat .claude/skills/frontend-design.md 2>/dev/null); if [ -n \"$skill\" ]; then jq -n --arg ctx \"$skill\" '{\"hookSpecificOutput\": {\"hookEventName\": \"UserPromptSubmit\", \"additionalContext\": (\"## Frontend Design Skill - Apply these principles to all frontend work:\\n\\n\" + $ctx)}}'; fi; fi",
+            "statusMessage": "Applying frontend-design skill..."
+          }
+        ]
+      }
+    ]
+  }
+}
