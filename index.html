@@ -5,14 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Gold Touch – Salon Medycyny Estetycznej i Kosmetologii w Olkuszu. Botoks, kwas hialuronowy, endermologia, depilacja laserowa. Ocena 4.9/5 z 341 opinii. Umów wizytę online.">
   <meta name="keywords" content="medycyna estetyczna Olkusz, botoks Olkusz, kwas hialuronowy Olkusz, kosmetologia Olkusz, Gold Touch, depilacja laserowa Olkusz">
-  <meta property="og:title" content="Gold Touch – Medycyna Estetyczna & Kosmetologia | Olkusz">
+  <meta property="og:title" content="Gold Touch – Medycyna Estetyczna &amp; Kosmetologia | Olkusz">
   <meta property="og:description" content="Nowoczesny salon medycyny estetycznej w Olkuszu. 4.9/5 z 341 opinii. Umów wizytę online.">
   <meta property="og:type" content="website">
-  <title>Gold Touch – Medycyna Estetyczna & Kosmetologia | Olkusz</title>
+  <title>Gold Touch – Medycyna Estetyczna &amp; Kosmetologia | Olkusz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;display:none;align-items:center;justify-content:center;padding:1rem;}
+    .modal-overlay.active{display:flex;}
+    .modal-box{background:#fff;border-radius:12px;width:100%;max-width:860px;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;}
+    .modal-header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid #eee;}
+    .modal-header h2{margin:0;font-size:1.2rem;}
+    .modal-close{background:none;border:none;font-size:1.8rem;cursor:pointer;line-height:1;color:#666;}
+    .modal-body{flex:1;overflow:auto;position:relative;min-height:500px;}
+    .modal-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;color:#888;}
+    .spinner{width:36px;height:36px;border:3px solid #eee;border-top-color:#b8960c;border-radius:50%;animation:spin .8s linear infinite;}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    #calendarFrame{width:100%;height:600px;border:0;display:none;}
+  </style>
 </head>
 <body>
 
@@ -20,7 +33,7 @@
   <header class="nav" id="nav">
     <a href="#" class="nav__logo">
       <span class="nav__logo-gold">Gold Touch</span>
-      <span class="nav__logo-sub">Medycyna Estetyczna & Kosmetologia</span>
+      <span class="nav__logo-sub">Medycyna Estetyczna &amp; Kosmetologia</span>
     </a>
     <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -31,7 +44,7 @@
       <a href="#cennik">Cennik</a>
       <a href="#opinie">Opinie</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="#rezerwacja" class="nav__cta">Umów wizytę</a>
+      <button class="nav__cta open-modal" style="cursor:pointer;">Umów wizytę</button>
     </nav>
   </header>
 
@@ -52,7 +65,7 @@
       </h1>
       <p class="hero__sub">Medycyna estetyczna · Kosmetologia · Depilacja laserowa · Modelowanie sylwetki</p>
       <div class="hero__actions">
-        <a href="#rezerwacja" target="_blank" rel="noopener" class="btn btn--rose">Zarezerwuj wizytę</a>
+        <button class="btn btn--rose open-modal">Zarezerwuj wizytę</button>
         <a href="#zabiegi" class="btn btn--ghost">Zobacz zabiegi</a>
       </div>
     </div>
@@ -146,7 +159,7 @@
       </article>
     </div>
     <div class="services__more">
-      <a href="#rezerwacja" target="_blank" rel="noopener" class="btn btn--outline-dark">Zobacz pełną ofertę online</a>
+      <button class="btn btn--outline-dark open-modal">Zarezerwuj zabieg online</button>
     </div>
   </section>
 
@@ -176,7 +189,7 @@
         </ul>
       </div>
       <div class="pricing__group">
-        <h3>⚡ Depilacja & Sylwetka</h3>
+        <h3>⚡ Depilacja &amp; Sylwetka</h3>
         <ul>
           <li><span>Depilacja laserowa – pachy</span><span>150 zł</span></li>
           <li><span>Endermologia całego ciała</span><span>150 zł</span></li>
@@ -185,7 +198,7 @@
       </div>
     </div>
     <p class="pricing__note">Pełny cennik dostępny online · Bezpłatna konsultacja przed każdym zabiegiem</p>
-    <a href="#rezerwacja" target="_blank" rel="noopener" class="btn btn--rose">Zarezerwuj zabieg</a>
+    <button class="btn btn--rose open-modal">Zarezerwuj zabieg</button>
   </section>
 
   <!-- GALERIA -->
@@ -226,22 +239,22 @@
     <div class="reviews__grid">
       <blockquote class="review-card">
         <div class="review-card__stars">★★★★★</div>
-        <p>„Cudowne miejsce! Panie są bardzo miłe i profesjonalne. Efekty zabiegu przerosły moje oczekiwania. Na pewno wrócę!"</p>
+        <p>„Cudowne miejsce! Panie są bardzo miłe i profesjonalne. Efekty zabiegu przerосły moje oczekiwania. Na pewno wrócę!”</p>
         <cite>— Monika W.</cite>
       </blockquote>
       <blockquote class="review-card review-card--featured">
         <div class="review-card__stars">★★★★★</div>
-        <p>„Zabiegi botoksem zrobione perfekcyjnie – naturalnie i dokładnie tak jak chciałam. Polecam każdemu kto chce profesjonalnej obsługi w Olkuszu."</p>
+        <p>„Zabiegi botoksem zrobione perfekcyjnie – naturalnie i dokładnie tak jak chciałam. Polecam każdemu kto chce profesjonalnej obsługi w Olkuszu.”</p>
         <cite>— Agnieszka K.</cite>
       </blockquote>
       <blockquote class="review-card">
         <div class="review-card__stars">★★★★★</div>
-        <p>„Endermologia zmieniła moje życie. Po 10 zabiegach sylwetka nie do poznania. Już umówiłam kolejną serię!"</p>
+        <p>„Endermologia zmieniła moje życie. Po 10 zabiegach sylwetka nie do poznania. Już umówiłam kolejną serię!”</p>
         <cite>— Justyna P.</cite>
       </blockquote>
     </div>
     <div class="reviews__cta">
-      <a href="#rezerwacja" target="_blank" rel="noopener" class="btn btn--outline-light">Wszystkie opinie online</a>
+      <button class="btn btn--outline-light open-modal">Umów wizytę online</button>
     </div>
   </section>
 
@@ -251,7 +264,7 @@
       <span class="label">Rezerwacja online</span>
       <h2>Umów wizytę<br><em>online</em></h2>
       <p style="max-width:480px;margin:.75rem auto 2.5rem;color:var(--ink-soft);font-size:.95rem;">Wybierz wolny termin, wypełnij formularz i gotowe — potwierdzenie dostaniesz mailem.</p>
-      <a href="https://calendar.app.google/rRM4cPw8HPBGriv87" target="_blank" rel="noopener" class="btn btn--rose" style="font-size:1rem;padding:1.2rem 3rem;">Zarezerwuj wizytę online</a>
+      <button class="btn btn--rose open-modal" style="font-size:1rem;padding:1.2rem 3rem;">Zarezerwuj wizytę online</button>
     </div>
   </section>
 
@@ -264,7 +277,7 @@
     <dl class="faq__list">
       <div class="faq__item">
         <dt><button class="faq__btn" aria-expanded="false" aria-controls="faq1">Czy zabieg botoksem boli?<span class="faq__icon">+</span></button></dt>
-        <dd id="faq1" class="faq__answer" hidden>Zabieg jest prawie bezbolesny. Używamy bardzo cienkich igieł, a na życzenie nakładamy krem znieczulający. Większość klientek porównuje ból do małego ukłucia komara.</dd>
+        <dd id="faq1" class="faq__answer" hidden>Zabieg jest prawie bezbolesny. Używamy bardzo cienkich igł, a na życzenie nakładamy krem znieczulający. Większość klientek porównuje ból do małego ukłucia komara.</dd>
       </div>
       <div class="faq__item">
         <dt><button class="faq__btn" aria-expanded="false" aria-controls="faq2">Kiedy widać efekty botoksu?<span class="faq__icon">+</span></button></dt>
@@ -318,7 +331,7 @@
       <div class="contact__social">
         <a href="https://www.facebook.com/goldtoucholkusz" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/goldtoucholkusz" target="_blank" rel="noopener">Instagram</a>
-        <a href="#rezerwacja">Umów wizytę</a>
+        <button class="open-modal" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:inherit;color:inherit;text-decoration:underline;padding:0;">Umów wizytę</button>
       </div>
     </div>
     <div class="contact__map">
@@ -336,7 +349,7 @@
     <div class="footer__top">
       <div class="footer__brand">
         <span class="footer__logo">Gold Touch</span>
-        <p>Medycyna Estetyczna & Kosmetologia<br>ul. Górnicza 5 · Olkusz</p>
+        <p>Medycyna Estetyczna &amp; Kosmetologia<br>ul. Górnicza 5 · Olkusz</p>
       </div>
       <nav class="footer__nav">
         <a href="#zabiegi">Zabiegi</a>
@@ -346,15 +359,48 @@
       </nav>
       <div class="footer__book">
         <p>Rezerwacja online</p>
-        <a href="#rezerwacja" target="_blank" rel="noopener" class="btn btn--rose">Zarezerwuj online</a>
+        <button class="btn btn--rose open-modal">Zarezerwuj online</button>
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2025 Gold Touch – Kamila Danecka-Baran & Tomasz Baran. Wszelkie prawa zastrzeżone.</p>
+      <p>© 2025 Gold Touch – Kamila Danecka-Baran &amp; Tomasz Baran. Wszelkie prawa zastrzeżone.</p>
       <p>ul. Górnicza 5, 32-300 Olkusz · <a href="tel:786677811">786 677 811</a></p>
     </div>
   </footer>
 
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>Rezerwacja wizyty</h2>
+        <button class="modal-close" id="modalClose">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-loading" id="modalLoading">
+          <div class="spinner"></div>
+          <span>Ładowanie kalendarza…</span>
+        </div>
+        <iframe
+          id="calendarFrame"
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2E-luu58dVJt9ShymnccU8ygbCJA2oqf2e0uhlmIwe5BxmTINAy2HH8s65eVfAOsOCDgGFGgD2?gv=true"
+          width="100%"
+          height="600"
+          frameborder="0"
+          onload="document.getElementById('modalLoading').style.display='none'; this.style.display='block';"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
   <script src="js/script.js" defer></script>
+  <script>
+    const overlay = document.getElementById('modalOverlay');
+    const closeBtn = document.getElementById('modalClose');
+    document.querySelectorAll('.open-modal').forEach(el => {
+      el.addEventListener('click', () => overlay.classList.add('active'));
+    });
+    closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('active'); });
+  </script>
 </body>
 </html>
